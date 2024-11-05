@@ -1,4 +1,4 @@
-= Zeitreihen-Datenbanken: InfluxDB und Alternativen
+= Zeitreihen-Datenbanken: InfluxDB
 :author: Said Nurceski
 :revnumber: 1.2
 :revdate: {docdate}
