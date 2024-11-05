@@ -14,7 +14,6 @@
 :title-slide-transition-speed: fast
 
 == Einleitung
-
 * Was sind Zeitreihen-Datenbanken?
 * Bedeutung von Zeitreihendaten
 * Überblick über die Präsentation
