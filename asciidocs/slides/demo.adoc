@@ -49,6 +49,18 @@
 * Entwickelt von InfluxData als Nachfolger von InfluxQL
 * Funktional und erweiterbar
 
+== Flux Datenmodell
+
+image::/images/img_1.png[Flux Datenmodell]
+
+* Darstellung des Datenmodells in Flux als Stream of Tables
+* Zeigt, wie Daten in Tabellenstrukturen organisiert sind
+* Jede Tabelle besteht aus Spalten und Zeilen
+
+== Flux Datenmodell Beispiel
+
+image::/images/img_2.png[Flux Datenmodell]
+
 == Beispiel eines Flux Queries
 
 [source,flux]
@@ -64,7 +76,6 @@ from(bucket: "sensordaten")
 
 == Alternativen zu InfluxDB
 
-* TimescaleDB
 * Prometheus
 * OpenTSDB
 * Graphite
