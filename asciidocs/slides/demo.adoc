@@ -1,138 +1,163 @@
-= Some Slide
-:author: firstname lastname
-:email: x.y@htl.at
-:revnumber: 1.0
+= Zeitreihen-Datenbanken: InfluxDB und Alternativen
+:author: Said Nurceski
+:revnumber: 1.2
 :revdate: {docdate}
-:revremark: SLIDEDEMO @ HTL Leonding
+:revremark: Präsentation @ HTL Leonding
 :encoding: utf-8
 :lang: de
 :doctype: article
-//:icons: font
-:customcss: css/presentation.css
-//:revealjs_customtheme: css/sky.css
-//:revealjs_customtheme: css/black.css
 :revealjs_width: 1408
 :revealjs_height: 792
 :source-highlighter: highlightjs
-//:revealjs_parallaxBackgroundImage: images/background-landscape-light-orange.jpg
-//:revealjs_parallaxBackgroundSize: 4936px 2092px
-//:highlightjs-theme: css/atom-one-light.css
-// we want local served font-awesome fonts
-:iconfont-remote!:
-:iconfont-name: fonts/fontawesome/css/all
-//:revealjs_parallaxBackgroundImage: background-landscape-light-orange.jpg
-//:revealjs_parallaxBackgroundSize: 4936px 2092px
-ifdef::env-ide[]
-:imagesdir: ../images
-endif::[]
-ifndef::env-ide[]
 :imagesdir: images
-endif::[]
-//:revealjs_theme: sky
-//:title-slide-background-image: img.png
 :title-slide-transition: zoom
 :title-slide-transition-speed: fast
 
-Testing filter by changing documentation file
+== Einleitung
 
-== Slide w/ image
+* Was sind Zeitreihen-Datenbanken?
+* Bedeutung von Zeitreihendaten
+* Überblick über die Präsentation
 
-[.stretch]
-image::img.png[]
+== Was sind Zeitreihen-Datenbanken?
 
-[.lightbg,background-opacity="0.7"]
-== Slide w/ text and background image
+* Spezialisierte Datenbanken für Zeitreihendaten
+* Optimiert für hohe Schreibgeschwindigkeit und Komprimierung
+* Anwendungen in IoT, Monitoring, Finanzdaten, etc.
 
-image::img.png[background, size="contain"]
+== Bedeutung von Zeitreihendaten
 
+* Daten mit Zeitstempel
+* Analyse von Trends und Mustern über die Zeit
+* Entscheidungsfindung basierend auf historischen Daten
 
-* Topic 1
-* Topic 2
-* Topic 3
+== Einführung in InfluxDB
 
-[%auto-animate]
-== !
+* Open-Source Zeitreihen-Datenbank
+* Entwickelt von InfluxData
+* Geschrieben in Go
 
-Matched element will be animated automatically!
+== Hauptmerkmale von InfluxDB
 
-[%auto-animate]
-== !
+* Hohe Leistung und Skalierbarkeit
+* Einfache Abfragesprache (InfluxQL und Flux)
+* Integrierte Unterstützung für Downsampling und Retention Policies
 
-[.highlight]
-Matched element will be animated automatically!
+== Flux Queries
 
-And move to the right position!
+* Moderne Skriptsprache für Abfragen, Verarbeitung und Task-Automatisierung
+* Entwickelt von InfluxData als Nachfolger von InfluxQL
+* Funktional und erweiterbar
 
-[%hardbreaks]
-⬆️
-⬆️
-⬆️
+== Beispiel eines Flux Queries
 
-
-[%auto-animate]
-== !
-
-[source%linenums,js,data-id=planets]
+[source,flux]
 ----
-let planets = [
-  { name: 'mars', diameter: 6779 },
-]
-----
-
-[%auto-animate]
-== !
-
-[source%linenums,js,data-id=planets]
-----
-let planets = [
-  { name: 'mars', diameter: 6779 },
-  { name: 'earth', diameter: 12742 },
-  { name: 'jupiter', diameter: 139820 }
-]
+from(bucket: "sensordaten")
+  |> range(start: -1h)
+  |> filter(fn: (r) => r._measurement == "temperature")
+  |> mean()
 ----
 
-[%auto-animate]
-== !
+* Abfrage nach dem Durchschnitt der Temperatur der letzten Stunde
+* Verwendung von Pipelines zur Verarbeitung
 
-[source%linenums,js,data-id=planets]
-----
-let circumferenceReducer = ( c, planet ) => {
-  return c + planet.diameter * Math.PI;
-}
+== Alternativen zu InfluxDB
 
-let planets = [
-  { name: 'mars', diameter: 6779 },
-  { name: 'earth', diameter: 12742 },
-  { name: 'jupiter', diameter: 139820 }
-]
+* TimescaleDB
+* Prometheus
+* OpenTSDB
+* Graphite
+* Kdb+
 
-let c = planets.reduce( circumferenceReducer, 0 )
-----
+== Prometheus
 
+* Open-Source Monitoring- und Alerting-Toolkit
+* Entwickelt von SoundCloud
+* Hauptmerkmale:
+* Multi-dimensionales Datenmodell
+* PromQL Abfragesprache
+* Pull-basiertes Abfragesystem
 
-[%auto-animate,auto-animate-unmatched=false]
-== Unmatched
+== OpenTSDB
 
-Introduction. (matched)
+* Zeitreihen-Datenbank auf Basis von HBase
+* Skalierbar für große Datenmengen
+* Vorteile:
+* Lineare Skalierbarkeit
+* Unterstützt Millionen von Datenpunkten pro Sekunde
+* Geeignet für verteilte Umgebungen
 
-[%auto-animate,auto-animate-unmatched=false]
-== Unmatched
+== Graphite
 
-Introduction. (matched)
+* Monitoring-Tool zur Speicherung und Visualisierung von Zeitreihendaten
+* Komponenten:
+* Carbon (Datensammlung)
+* Whisper (Speicherung)
+* Graphite-Web-App (Visualisierung)
+* Vorteile:
+* Einfachheit
+* Große Community
 
-This will be shown instantly ⚡ (unmatched)
+== Kdb+
 
+* Hochleistungs-Zeitreihen-Datenbank
+* Entwickelt von Kx Systems
+* Verwendet die Abfragesprache q
+* Vorteile:
+* Extrem hohe Geschwindigkeit
+* Häufig im Finanzsektor eingesetzt
 
-[%auto-animate,auto-animate-duration=5]
-== Duration
+== Vergleich der Zeitreihen-Datenbanken
 
-This animation...
+[cols="1,1,1,1", options="header"]
+|===
+|Merkmal |InfluxDB |Prometheus |TimescaleDB
 
-[%auto-animate,auto-animate-duration=5]
-== Duration
+|Schreibgeschwindigkeit
+|Hoch
+|Sehr hoch
+|Mittel
 
-This animation...
+|Abfragesprache
+|InfluxQL/Flux
+|PromQL
+|SQL
 
-...will take 5 seconds! ⌚
+|Skalierbarkeit
+|Gut
+|Sehr gut
+|Sehr gut
 
+|Ecosystem
+|Groß, viele Integrationen
+|Aktive Community
+|PostgreSQL-Ökosystem
+|===
 
+== Auswahlkriterien
+
+* Anwendungsfall und Anforderungen
+* Datenvolumen und Schreibgeschwindigkeit
+* Abfragesprachen und Funktionalitäten
+* Community-Support und Dokumentation
+
+== Zusammenfassung
+
+* Es gibt mehrere Alternativen zu InfluxDB
+* Die Wahl hängt von spezifischen Anforderungen ab
+* InfluxDB bietet starke Leistungen, aber Alternativen bieten auch einzigartige Vorteile
+
+== Fragen?
+
+Vielen Dank für Ihre Aufmerksamkeit!
+
+== Quellen
+
+* https://www.influxdata.com/
+* https://www.timescale.com/
+* https://prometheus.io/
+* https://opentsdb.net/
+* https://graphiteapp.org/
+* Fachliteratur zu Zeitreihen-Datenbanken
+* Aktuelle Studien und Berichte
