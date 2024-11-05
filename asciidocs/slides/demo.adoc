@@ -16,7 +16,6 @@
 == Einleitung
 * Was sind Zeitreihen-Datenbanken?
 * Bedeutung von Zeitreihendaten
-* Überblick über die Präsentation
 
 == Was sind Zeitreihen-Datenbanken?
 
