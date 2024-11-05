@@ -41,23 +41,20 @@
 * Einfache Abfragesprache (InfluxQL und Flux)
 * Integrierte Unterstützung für Downsampling und Retention Policies
 
+== Flux Datenmodell
+
+image::img_1.png[Flux Datenmodell]
+
+== Flux Datenmodell Beispiel
+
+image::img_2.png[Flux Datenmodell]
+
 == Flux Queries
 
 * Moderne Skriptsprache für Abfragen, Verarbeitung und Task-Automatisierung
 * Entwickelt von InfluxData als Nachfolger von InfluxQL
 * Funktional und erweiterbar
 
-== Flux Datenmodell
-
-image::img_1.png[Flux Datenmodell]
-
-* Darstellung des Datenmodells in Flux als Stream of Tables
-* Zeigt, wie Daten in Tabellenstrukturen organisiert sind
-* Jede Tabelle besteht aus Spalten und Zeilen
-
-== Flux Datenmodell Beispiel
-
-image::img_2.png[Flux Datenmodell]
 
 == Beispiel eines Flux Queries
 
