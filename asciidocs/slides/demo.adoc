@@ -17,7 +17,7 @@
 == Was sind Zeitreihen-Datenbanken?
 
 * Spezialisierte Datenbanken für Zeitreihendaten
-* Optimiert für hohe Schreibgeschwindigkeit und Komprimierung
+* Optimiert für hohe Schreibgeschwindigkeit
 * Anwendungen in IoT, Monitoring, Finanzdaten, etc.
 
 == Bedeutung von Zeitreihendaten
