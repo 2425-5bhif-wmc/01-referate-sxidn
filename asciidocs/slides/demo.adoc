@@ -69,7 +69,6 @@ from(bucket: "sensordaten")
 == Alternativen zu InfluxDB
 
 * Prometheus
-* OpenTSDB
 * Graphite
 * Kdb+
 
@@ -105,7 +104,7 @@ from(bucket: "sensordaten")
 
 [cols="1,1,1,1", options="header"]
 |===
-|Merkmal |InfluxDB |Prometheus |TimescaleDB
+|Merkmal |InfluxDB |Prometheus |Graphite
 
 |Schreibgeschwindigkeit
 |Hoch
@@ -115,24 +114,18 @@ from(bucket: "sensordaten")
 |Abfragesprache
 |InfluxQL/Flux
 |PromQL
-|SQL
+|Kein spezielles Query-Interface
 
 |Skalierbarkeit
 |Gut
 |Sehr gut
-|Sehr gut
+|Gut
 
 |Ecosystem
 |Groß, viele Integrationen
 |Aktive Community
-|PostgreSQL-Ökosystem
+|Große Community, einfache Integration
 |===
-
-== Zusammenfassung
-
-* Es gibt mehrere Alternativen zu InfluxDB
-* Die Wahl hängt von spezifischen Anforderungen ab
-* InfluxDB bietet starke Leistungen, aber Alternativen bieten auch einzigartige Vorteile
 
 == Fragen?
 
