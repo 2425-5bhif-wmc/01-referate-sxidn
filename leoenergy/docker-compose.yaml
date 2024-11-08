@@ -16,11 +16,3 @@ services:
       - "8086:8086"
     volumes:
       - $PWD/data/influxdb:/var/lib/influxdb
-  leoenergy:
-    image: ghcr.io/2324-4bhif-syp/2324-4bhif-syp-project-iot-dashboard/leoenergy:latest
-    container_name: leoenergy
-    restart: unless-stopped
-    ports:
-      - "8080:8080"
-    depends_on:
-      - influxdb

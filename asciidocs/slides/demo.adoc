@@ -13,9 +13,6 @@
 :title-slide-transition: zoom
 :title-slide-transition-speed: fast
 
-== Einleitung
-* Was sind Zeitreihen-Datenbanken?
-* Bedeutung von Zeitreihendaten
 
 == Was sind Zeitreihen-Datenbanken?
 
@@ -51,9 +48,9 @@ image::img_2.png[Flux Datenmodell]
 
 == Flux Queries
 
-* Moderne Skriptsprache für Abfragen, Verarbeitung und Task-Automatisierung
 * Entwickelt von InfluxData als Nachfolger von InfluxQL
 * Funktional und erweiterbar
+* Man kann Tasks usw erstellen
 
 
 == Beispiel eines Flux Queries
@@ -83,16 +80,6 @@ from(bucket: "sensordaten")
 * Hauptmerkmale:
 * Multi-dimensionales Datenmodell
 * PromQL Abfragesprache
-* Pull-basiertes Abfragesystem
-
-== OpenTSDB
-
-* Zeitreihen-Datenbank auf Basis von HBase
-* Skalierbar für große Datenmengen
-* Vorteile:
-* Lineare Skalierbarkeit
-* Unterstützt Millionen von Datenpunkten pro Sekunde
-* Geeignet für verteilte Umgebungen
 
 == Graphite
 
@@ -141,13 +128,6 @@ from(bucket: "sensordaten")
 |PostgreSQL-Ökosystem
 |===
 
-== Auswahlkriterien
-
-* Anwendungsfall und Anforderungen
-* Datenvolumen und Schreibgeschwindigkeit
-* Abfragesprachen und Funktionalitäten
-* Community-Support und Dokumentation
-
 == Zusammenfassung
 
 * Es gibt mehrere Alternativen zu InfluxDB
@@ -165,5 +145,3 @@ Vielen Dank für Ihre Aufmerksamkeit!
 * https://prometheus.io/
 * https://opentsdb.net/
 * https://graphiteapp.org/
-* Fachliteratur zu Zeitreihen-Datenbanken
-* Aktuelle Studien und Berichte
