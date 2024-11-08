@@ -48,10 +48,9 @@ image::img_2.png[Flux Datenmodell]
 
 == Flux Queries
 
-* Entwickelt von InfluxData als Nachfolger von InfluxQL
-* Funktional und erweiterbar
+* Queries
 * Man kann Tasks usw erstellen
-
+* Meiner Meinung nach sehr kompliziert
 
 == Beispiel eines Flux Queries
 
@@ -64,7 +63,6 @@ from(bucket: "sensordaten")
 ----
 
 * Abfrage nach dem Durchschnitt der Temperatur der letzten Stunde
-* Verwendung von Pipelines zur Verarbeitung
 
 == Alternativen zu InfluxDB
 
