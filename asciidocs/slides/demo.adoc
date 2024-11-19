@@ -35,7 +35,7 @@
 == Hauptmerkmale von InfluxDB
 
 * Hohe Leistung und Skalierbarkeit
-* Einfache Abfragesprache (InfluxQL und Flux)
+* Abfragesprache (InfluxQL und Flux)
 * Integrierte Unterstützung für Downsampling und Retention Policies
 
 == Flux Datenmodell
