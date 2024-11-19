@@ -1,4 +1,22 @@
-= Index page
-ifndef::imagesdir[:imagesdir: images]
+= InfluxDB
+Said Nurceski
+1.0.0, {docdate}
+:imagesdir: img
+:icons: font
+:sectnums:
+:toc:
+:experimental:
 
-image::img.png[]
+== Slides
+
+Die Folien sind https://2425-5bhif-wmc.github.io/01-referate-sxidn/slides/demo.html[hier^] zu finden.
+
+== Grafana Dokumentation
+
+== Übersicht
+
+Dieses Projekt wurde im Rahmen einer Präsentation über Configurations entwickelt.
+
+=== Getting Started
+
+https://2425-5bhif-wmc.github.io/01-referate-Armin1503/documentation.html[Getting Started^]
