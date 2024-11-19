@@ -19,29 +19,6 @@ public class MqttReceiver {
        influxDbRepository.insertMeasurementFromJSON(sensorValue);
    }
 
-    public void insertCo2Measurement(Co2Value co2Value){
-        influxDbRepository.insertCo2MeasurementFromJSON(co2Value);
-    }
-
-
-
-
-   @Incoming("Co2")
-   public void recieveCo2(byte[] byteArray){
-       log.infof("Received measurement from Co2 mqtt: %s", byteArray.length);
-
-       String msg = new String(byteArray);
-       try{
-           Co2Value co2Value = Co2Value.fromJson(msg);
-           insertCo2Measurement(co2Value);
-
-       }
-       catch(Exception e){
-           e.printStackTrace();
-       }
-   }
-
-
     @Incoming("leoenergy")
     public void receive(byte[] byteArray) {
        log.infof("Received measurement from leoenergy topic mqtt: %s", byteArray.length);

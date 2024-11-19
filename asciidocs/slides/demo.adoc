@@ -64,6 +64,15 @@ from(bucket: "sensordaten")
 
 * Abfrage nach dem Durchschnitt der Temperatur der letzten Stunde
 
+== Aufgabenstellung
+* Mqtt
+* InfluxDB
+* Grafana
+
+== Architektur
+
+image::architecture.png[Architektur]
+
 == Alternativen zu InfluxDB
 
 * Prometheus
