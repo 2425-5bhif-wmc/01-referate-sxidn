@@ -12,7 +12,4 @@ Said Nurceski
 Die Folien sind https://2425-5bhif-wmc.github.io/01-referate-sxidn/slides/demo.html[hier^] zu finden.
 
 == Grafana Dokumentation
-
-=== Getting Started
-
-https://2425-5bhif-wmc.github.io/01-referate-Armin1503/documentation.html[Getting Started^]
+https://2425-5bhif-wmc.github.io/01-referate-sxidn/grafana_documentations.html[Grafana Documentation^]
