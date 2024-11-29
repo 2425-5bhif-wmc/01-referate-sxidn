@@ -13,3 +13,6 @@ Die Folien sind https://2425-5bhif-wmc.github.io/01-referate-sxidn/slides/demo.h
 
 == Grafana Dokumentation
 https://2425-5bhif-wmc.github.io/01-referate-sxidn/grafana_documentations.html[Grafana Documentation^]
+
+== Deployment Dokumentation
+https://2425-5bhif-wmc.github.io/01-referate-sxidn/deployment_documentations.html[Deployment Documentation^]
